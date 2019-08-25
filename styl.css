@@ -22,10 +22,11 @@ html, body{
     width: 500px;
     resize: none;
     font-family: 'Roboto Condensed', sans-serif;
-    border: solid 5px red;
+    border: solid 5px black;
     border-radius: 15px;
     padding: 5px;
     font-size: 20px;
+    box-sizing: content-box;
 }
 
 #TuWychodziR{
@@ -33,10 +34,11 @@ html, body{
     width: 500px;
     resize: none;
     font-family: 'Roboto Condensed', sans-serif;
-    border: solid 5px red;
+    border: solid 5px black;
     border-radius: 15px;
     padding: 5px;
     font-size: 20px;
+    box-sizing: content-box;
 }
 
 button{
@@ -82,4 +84,22 @@ footer p{
 
 :-ms-input-placeholder {  
    text-align: center; 
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: gray;
+    border-radius: 50px;
+    cursor: pointer;
+}
+::-webkit-scrollbar-thumb{
+    background: #F00;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: firebrick;
+    border-radius: 50px;
 }
