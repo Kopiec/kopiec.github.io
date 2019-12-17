@@ -2,22 +2,134 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <link rel="Stylesheet" href="styl.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="favicon.png"/>
-    <title>Szyfrowanie litery "R"</title>
+    <title>Roksana Węgielek kurwa kręgielek</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        html, body{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background-image: url(xd.jpg)
+        }
+        #roxie{
+            position: absolute;
+            top: 35.5%;
+            left: 45%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            opacity: 0;
+        }
+        #roxieup{
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            z-index: 0;
+            opacity: 0;
+            height: 200px;
+            width: 100px;
+        }
+        #roxiedown{
+            position: absolute;
+            bottom: 5%;
+            left: 0%;
+            z-index: 0;
+            opacity: 0;
+            height: 200px;
+            width: 100px;
+        }
+        #licznik{
+            position: absolute;
+            top: 49%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            background-color: white;
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            opacity: 0.6;
+            
+        }
+        #xd{
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            position: absolute;
+            top: 49%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            z-index: 8;
+            background-color: black;
+            color: white;
+            font-size:30px;
+            border: none;
+        }
+        #liczba{
+            position: absolute;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            opacity: 1;
+            color: black;
+            font-size: 50px;
+        }
+        @keyframes spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        @keyframes czill{
+            from { left: 0% }
+            to { left: 89%; }
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
-    <div id="wrapper"><center>
-    <h1>Szyfrowanie literki "R"</h1><br />
-    <textarea id="TuJestR" name="TuR" placeholder="Tekst do szyfrowania"></textarea><br /><br />
-    <button onClick="przemianaR(); return false">Szyfrowanie!</button><br /><br />
-    <textarea id="TuWychodziR" name="TuOR" placeholder="Tekst do odszyfrowania"></textarea><br /><br />
-    <button onClick="odmianaR(); return false">Deszyfrowanie!</button>
-    </center></div>
-    <footer>
-        <p>Autor strony: Kopiec<br />Kontakt: kopiec12@interia.pl</p>
-    </footer>
-    <script src="skrypt.js"></script>
+     <img id="roxieup" alt="Sie zjebało" src="xddd.png">
+     <img id="roxiedown" alt="Sie zjebało" src="xddd.png">
+      <div id="licznik">
+          <p id="liczba">0</p>
+      </div>
+      <button id="xd">Start</button>
+      <img id="roxie" alt="Sie zjebało" src="xdd.png">
+      <audio id="test" autoplay loop>
+          <source src="music.mp3">
+      </audio>
+      <script>
+          var Ile=document.getElementById('liczba');
+          var Licznik=0;
+          function rotate(){
+              Licznik++;
+              Ile.innerHTML=Licznik;
+          }
+          
+          function timer(){
+              setInterval(rotate, 3000)
+          }
+          
+          function musicPlay() {
+            document.getElementById('test').play();
+            document.getElementById('test').volume=0.6;
+            document.removeEventListener('click', musicPlay);
+        }
+          document.getElementById('xd').addEventListener('click', function(){
+            musicPlay();
+            timer();
+            document.getElementById('xd').style.opacity=0;
+            document.getElementById('roxie').style.animation="spin 3s linear infinite";
+            document.getElementById('roxie').style.opacity=1;
+            document.getElementById('roxieup').style.animation="czill 3s linear infinite alternate";
+            document.getElementById('roxieup').style.opacity=1;
+            document.getElementById('roxiedown').style.animation="czill 3s linear infinite alternate";
+            document.getElementById('roxiedown').style.opacity=1;
+                                                         
+        })
+      </script>
 </body>
 </html>
