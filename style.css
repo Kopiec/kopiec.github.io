@@ -43,7 +43,7 @@ body{
     z-index: 0;
 }
 #progress{
-    width: 0px;
+    width: 98px;
     height: 2.4em;
     background: url(prog.png);
     opacity: 1;
@@ -79,4 +79,9 @@ a:visited{
 a:hover{
     color: #FFFFFF;
     text-decoration: underline;
+}
+#infoV2{
+    color: #FFFFFF;
+    font-size: 1em;
+    text-align: center;
 }
