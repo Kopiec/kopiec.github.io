@@ -43,7 +43,7 @@ body{
     z-index: 0;
 }
 #progress{
-    width: 98px;
+    width: 392px;
     height: 2.4em;
     background: url(prog.png);
     opacity: 1;
