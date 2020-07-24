@@ -2,10 +2,44 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Discordowa Masakra V3</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico"/>
+    <style>
+        #mobile{
+            display: none;
+        }
+        @media screen and (max-width: 600px){
+            #header{
+                display: none;
+            }
+            #info{
+                display: none;
+            }
+            #progress{
+                display: none;
+            }
+            #progress-bar{
+                display: none;
+            }
+            #infoV2{
+                display: none;
+            }
+            #about{
+                display: none;
+            }
+            #mobile{
+                display: block;
+                color: #FFFFFF;
+                font-size: 2.9em;
+                text-align: center;
+                text-shadow: 2px 0px 5px rgba(116, 140, 219, 1);
+                margin-bottom: 70px;
+            }
+        }
+    </style>
 </head>
 <body>
     <p id="header">Discordowa Masakra V3</p>
@@ -14,5 +48,6 @@
     <div id="progress"></div>
     <p id="infoV2">Oczekiwanie na premiere...</p>
     <p id="about"><a href="info.html">Więcej informacji</a></p>
+    <p id="mobile">Strona ta nie jest przystosowana do działania na telefonach.</p>
 </body>
 </html>

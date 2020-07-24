@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Discordowa Masakra V3 - info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style-info.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico"/>
+    <style>
+        #mobile{
+            display: none;
+        }
+        @media screen and (max-width: 600px){
+            #bg{
+                display: none;
+            }
+            #header{
+                display: none;
+            }
+            #first{
+                display: none;
+            }
+            #second{
+                display: none;
+            }
+            #third{
+                display: none;
+            }
+            #mobile{
+                display: block;
+                color: #FFFFFF;
+                font-size: 2.9em;
+                text-align: center;
+                text-shadow: 2px 0px 5px rgba(116, 140, 219, 1);
+                margin-bottom: 70px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="bg">
@@ -23,5 +54,6 @@
     </div>
     
     </div>
+    <p id="mobile">Strona ta nie jest przystosowana do działania na telefonach.</p>
 </body>
 </html>
