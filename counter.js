@@ -1,6 +1,6 @@
 var handler = document.getElementById('counter');
 
-var eventTime = new Date(2020, 6, 24, 15, 55, 15);
+var eventTime = new Date(2020, 6, 24, 20, 00, 00);
 
 function stopFunction() {
   clearInterval(inter);
@@ -34,7 +34,7 @@ function counterTime(){
     }
     else{
         stopFunction();
-        return '<iframe width="1120" height="630" src="https://www.youtube.com/embed/-sNWKbnaFkg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+        return '<iframe width="1120" height="630" src="https://www.youtube.com/embed/QuqJOnO-mr8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
     }
 }
 
