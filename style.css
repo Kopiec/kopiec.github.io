@@ -43,13 +43,12 @@ body{
     z-index: 0;
 }
 #progress{
-    width: 392px;
+    width: 490px;
     height: 2.4em;
     background: url(prog.png);
     opacity: 1;
     border-radius: 1.5em;
-    border-bottom-right-radius: 0px;
-    border-top-right-radius: 0px;
+
     position: relative;
     top: -43px;
     left: 5px;
