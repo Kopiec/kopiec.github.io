@@ -19,3 +19,12 @@ body{
     background-attachment: fixed;
     background-size: 100% 100%;
 }
+#counter{
+    color: white;
+    font-size: 4em;
+    background-color: rgba(0, 0, 0, 0.5);;
+    padding: .2em;
+    border-radius: .2em;
+    position: relative;
+        top: 2.7em;
+}
