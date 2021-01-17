@@ -1,9 +1,6 @@
-/*
-Pozdro byq malinowy, jezeli to czytasz odezwij sie na discordzie priv :)
-*/
 var handler = document.getElementById('counter');
 
-var eventTime = new Date(2021, 0, 17, 20, 00, 00);
+var eventTime = new Date(2021, 0, 18, 20, 00, 00);
 
 function stopFunction() {
   clearInterval(inter);
