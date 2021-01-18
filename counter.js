@@ -1,6 +1,6 @@
 var handler = document.getElementById('counter');
 
-var eventTime = new Date(2021, 0, 18, 20, 00, 00);
+var eventTime = new Date(2021, 0, 21, 20, 00, 00);
 
 function stopFunction() {
   clearInterval(inter);
