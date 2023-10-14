@@ -2,19 +2,137 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laugh Craft V4</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="favicon.ico"/>
+    <title>Roksana Węgielek kurwa kręgielek</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        html, body{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background-image: url(xd.jpg)
+        }
+        #roxie{
+            position: absolute;
+            top: 35.5%;
+            left: 45%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            opacity: 0;
+        }
+        #roxieup{
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            z-index: 0;
+            opacity: 0;
+            height: 200px;
+            width: 100px;
+        }
+        #roxiedown{
+            position: absolute;
+            bottom: 5%;
+            left: 0%;
+            z-index: 0;
+            opacity: 0;
+            height: 200px;
+            width: 100px;
+        }
+        #licznik{
+            position: absolute;
+            top: 49%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            background-color: white;
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            opacity: 0.6;
+            
+        }
+        #xd{
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            position: absolute;
+            top: 49%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            z-index: 8;
+            background-color: black;
+            color: white;
+            font-size:30px;
+            border: none;
+			cursor: pointer;
+        }
+        #liczba{
+            position: absolute;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            opacity: 1;
+            color: black;
+            font-size: 50px;
+        }
+        @keyframes spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        @keyframes czill{
+            from { left: 0% }
+            to { left: 89%; }
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
-    <div id="header">
-    <img src="logo.png" alt="logo" width="128" height="128" align="left">
-    Laugh Craft V4
-    </div>
-    <div id="bg">
-        <p>Discordowa Masakra powraca!<br><br>Tym razem oprócz zmienionej nazwy, zmieniamy reguły gry, zamiast wszystkim dobrze znanego survivalu i sąsiedzkiej (nie)pomocy, nowa edycja przyniesie ze sobą rozłam discorda na dwie drużyny i zmagania na latających wyspach.<br>Jeśli chcesz bawić się z nami zapisz się do gry na naszej stronie (najlepiej zapisać się jeszcze przed startem) i czekaj na losowanie drużyn, które odbędzie się w czwartek 21.01.2021r. Start serwera zaplanowany jest na piątek 22.01.2021r.</p>
-    </div>
+     <img id="roxieup" alt="Sie zjebało" src="xddd.png">
+     <img id="roxiedown" alt="Sie zjebało" src="xddd.png">
+      <div id="licznik">
+          <p id="liczba">0</p>
+      </div>
+      <button id="xd">Start</button>
+      <img id="roxie" alt="Sie zjebało" src="xdd.png">
+      <audio id="test" autoplay loop>
+          <source src="music.mp3">
+      </audio>
+      <script>
+          var Ile=document.getElementById('liczba');
+          var Licznik=0;
+          function rotate(){
+              Licznik++;
+              Ile.innerHTML=Licznik;
+          }
+          
+          function timer(){
+              setInterval(rotate, 3000)
+          }
+          
+          function musicPlay() {
+            document.getElementById('test').play();
+            document.getElementById('test').volume=0.6;
+            document.removeEventListener('click', musicPlay);
+        }
+          document.getElementById('xd').addEventListener('click', function(){
+            musicPlay();
+            timer();
+            document.getElementById('xd').style.opacity=0;
+            document.getElementById('xd').disabled=true;
+            document.getElementById('roxie').style.animation="spin 3s linear infinite";
+            document.getElementById('roxie').style.opacity=1;
+            document.getElementById('roxieup').style.animation="czill 3s linear infinite alternate";
+            document.getElementById('roxieup').style.opacity=1;
+            document.getElementById('roxiedown').style.animation="czill 3s linear infinite alternate";
+            document.getElementById('roxiedown').style.opacity=1;
+			document.getElementById('xd').style.cursor="auto";
+                                                         
+        })
+      </script>
 </body>
 </html>
