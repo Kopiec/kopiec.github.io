@@ -1,136 +1,27 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="pl">
 <head>
-	<title>bedoes</title>
-	<meta charset="UTF-8">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-	<style>
-		html, body{
-			padding: 0px;
-			margin: 0px;
-		}
-		body{
-			background-image: url(tlo.jpg);
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-		#smok{
-			position: absolute;
-			top: 35%;
-			left: 46%;
-			margin-right: -50%;
-			transform-origin: 50% 50%;
-			z-index: 0;
-			opacity: 0;
-			
-		}
-		#bedoesGora{
-			position: absolute;
-			top: 0%;
-			left: 0%;
-			z-index: 0;
-			opacity: 0;
-			height: 150px;
-			width: 150px;
-		}
-		#bedoesDol{
-			position: absolute;
-			bottom: 5%;
-			left: 0%;
-			z-index: 0;
-			opacity: 0;
-			height: 150px;
-			width: 150px;
-		}
-		#licznik{
-			position: absolute;
-			top: 44%;
-			left: 50%;
-			margin-right: -50%;
-			transform: translate (-50%, -50%);
-			z-index: 1;
-			height: 100px;
-			width: 100px;
-			border-radius: 50px;
-			opacity: 1;
-			}
-		#start{
-			position: absolute;
-			top: 44%;
-			left: 50%;
-			margin-right: -50%;
-			transform: translate (-50%, -50%);
-			z-index: 2;
-			background-color: black;
-			color: white;
-			height: 100px;
-			width: 100px;
-			border-radius: 50px;
-			font-size: 25px;
-			border: none;
-			cursor: pointer;
-		}
-		#liczba{
-			position: absolute;
-			top: -15%;
-			left: 40%;
-			margin-right: -50%;
-			transform: translate (-50%, -50%);
-			opacity: 1;
-			color: white;
-			font-size: 45px;
-		}
-		@keyframes spin{
-			from { transform: rotate(0deg); }
-			to { transform: rotate(360deg); }
-		}
-		@keyframes chill{
-			from{ left: 0%;}
-			to{ left: 89%;}
-			from{ transform: rotate(0deg);}
-			to{ transform: rotate(360deg);}
-		}
-	</style>
+    <title>Wilmart v1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" >
 </head>
 <body>
-	<img id="bedoesGora" alt="Bedoes Góra" src="smok.png">
-	<img id="bedoesDol" alt="Bedoes Dół" src="smok.png">
-	<div id="licznik">
-		<p id="liczba">0</p>
-	</div>
-	<button id="start">START</button>
-	<img id="smok" alt="Smok" src="bedoes.png">
-	<audio id="odtwarzanie" autoplay loop>
-		<source src="BEDOESIARA.mp3">
-	</audio>
-	<script>
-		var ile=document.getElementById('liczba');
-		var licznik=0;
-		function rotate(){
-			licznik++; 
-			ile.innerHTML=licznik;
-		}
-		function timer(){
-			setInterval(rotate,3000);
-		}
-		function musicPlay(){
-			document.getElementById('odtwarzanie').play();
-			document.getElementById('odtwarzanie').volume=0.6;
-			document.removeEventListener('click', musicPlay);
-			}
-			document.getElementById('start').addEventListener('click', function(){
-				musicPlay();
-				timer();
-				document.getElementById('start').style.opacity=0;
-				document.getElementById('start').disabled=true;
-				document.getElementById('smok').style.animation="spin 3s linear infinite";
-				document.getElementById('smok').style.opacity=1;
-				document.getElementById('bedoesGora').style.animation="chill 3s linear infinite alternate";
-				document.getElementById('bedoesGora').style.opacity=1;
-				document.getElementById('bedoesDol').style.animation="chill 3s linear infinite alternate";
-				document.getElementById('bedoesDol').style.opacity=1;
-				document.getElementById('start').style.cursor="auto";
-			})
-	</script>
+    <div id="parent">
+        <div id="nav-main">1
+        </div>
+        <div id="header">2
+        </div>
+        <div id="main-article">
+            <div id="article">
+                <p>
+                WilMart! Sieć sklepów wielobranżowych! Założony w pierwszym kwartale siódmego sezonu LaughCraft, by dawać nie tylko produkty, ale szczęście oraz pewność - pewność jakości!
+                </p>
+            </div>
+        </div>
+        <div id="footer">
+            Wilmart&trade; Since 2025
+        </div>
+    </div>
 </body>
 </html>
